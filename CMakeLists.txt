@@ -6,7 +6,7 @@ set(TARGET shim_go)
 set(SRCS 
     src/main.go)
 set(LIB 
-    src/main.go)
+    src/main.so)
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${LIB}
   DEPENDS ${SRCS}
