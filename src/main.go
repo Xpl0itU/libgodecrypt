@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"xpl0itu/godecrypt/src/decrypt"
-	"xpl0itu/godecrypt/src/extract"
+	"xpl0itu/libgodecrypt/src/decrypt"
+	"xpl0itu/libgodecrypt/src/extract"
 )
 
 func removeAppDecFiles() error {
@@ -24,6 +24,7 @@ func removeAppDecFiles() error {
 	return nil
 }
 
+//export DecryptAndExtract
 func DecryptAndExtract(path *C.char) {
 	os.Chdir(C.GoString(path))
 	decrypt.Decrypt()
