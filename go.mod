@@ -1,4 +1,4 @@
-module xpl0itu/godecrypt
+module xpl0itu/libgodecrypt
 
 go 1.20
 
