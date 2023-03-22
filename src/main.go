@@ -26,10 +26,12 @@ func removeAppDecFiles() error {
 
 //export DecryptAndExtract
 func DecryptAndExtract(path *C.char) {
+	origDir, _ := os.Getwd()
 	os.Chdir(C.GoString(path))
 	decrypt.Decrypt()
 	extract.Extract()
 	removeAppDecFiles()
+	os.Chdir(origDir)
 }
 
 func main() {}
